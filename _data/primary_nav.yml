@@ -1,0 +1,15 @@
+- title: 首页
+  link: /
+  show_on_mobile: true
+- title: 文档
+  link: /docs/
+  show_on_mobile: true
+- title: 资源
+  link: /resources/
+  show_on_mobile: true
+- title: 展示
+  link: /showcase/
+  show_on_mobile: false
+- title: 新闻
+  link: /news/
+  show_on_mobile: true
