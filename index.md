@@ -1,30 +1,29 @@
 ---
-title: Home
+title: 首页
 layout: home
+nav_order: 1
 ---
 
-This is a *bare-minimum* template to create a Jekyll site that uses the [Just the Docs] theme. You can easily set the created site to be published on [GitHub Pages] – the [README] file explains how to do that, along with other details.
+将普通文本转换为静态站点/博客
+{: .fs-9 }
 
-If [Jekyll] is installed on your computer, you can also build and preview the created site *locally*. This lets you test changes before committing them, and avoids waiting for GitHub Pages.[^1] And you will be able to deploy your local build to a different platform than GitHub Pages.
+* 简单：毋须数据库、评论审核或者令人心生敬畏的更新和安装——只需**您的内容**。
+* 静态：Markdown、Liquid、HTML 和 CSS 已是全部所需，静态站点静候部署。
+* 博客感知：永久链接、分类、页面、帖子和定制布局在这里都是一等公民。
 
-More specifically, the created site:
+## 快速上手说明
 
-- uses a gem-based approach, i.e. uses a `Gemfile` and loads the `just-the-docs` gem
-- uses the [GitHub Pages / Actions workflow] to build and publish the site on GitHub Pages
 
-Other than that, you're free to customize sites that you create with this template, however you like. You can easily change the versions of `just-the-docs` and Jekyll it uses, as well as adding further plugins.
+```sh
+gem install bundler jekyll
+jekyll new my-awesome-site
+cd my-awesome-site
+bundle exec jekyll serve
+# => Now browse to http://localhost:4000 
+```
 
-[Browse our documentation][Just the Docs] to learn more about how to use this theme.
+## GitHub Pages 为您提供**免费托管**
 
-To get started with creating a site, just click "[use this template]"!
+与托管公司打交道感到头疼？[GitHub Pages](https://pages.github.com/) 就是**基于 Jekyll 构建**的，所以您可以很轻松的将站点部署到 GitHub，而且还可以自由——[定制域名](https://help.github.com/articles/about-supported-custom-domains/)及其他。
 
-----
-
-[^1]: [It can take up to 10 minutes for changes to your site to publish after you push the changes to GitHub](https://docs.github.com/en/pages/setting-up-a-github-pages-site-with-jekyll/creating-a-github-pages-site-with-jekyll#creating-your-site).
-
-[Just the Docs]: https://just-the-docs.github.io/just-the-docs/
-[GitHub Pages]: https://docs.github.com/en/pages
-[README]: https://github.com/just-the-docs/just-the-docs-template/blob/main/README.md
-[Jekyll]: https://jekyllrb.com
-[GitHub Pages / Actions workflow]: https://github.blog/changelog/2022-07-27-github-pages-custom-github-actions-workflows-beta/
-[use this template]: https://github.com/just-the-docs/just-the-docs-template/generate
+[了解更多有关 GitHub Pages 信息&rarr;](https://pages.github.com/)
