@@ -3,30 +3,27 @@ layout: default
 parent: 手把手教程
 grand_parent: 起步
 nav_order: 9
-title: Collections
+title: 专题
 permalink: /getting-started/step-by-step/09-collections/
 ---
-Let's look at fleshing out authors so each author has their own page with a
-blurb and the posts they've published.
+让我们看看如何充实作者信息，让每个作者都有自己的简介和他们发表的帖子。
 
-To do this you'll use collections. Collections are similar to posts except the
-content doesn't have to be grouped by date.
+要做到这些您需要使用专题。专题类似于帖子列表但内容不是以日期分类的。
 
-## Configuration
+## 配置
 
-To set up a collection you need to tell Jekyll about it. Jekyll configuration
-happens in a file called `_config.yml` (by default).
+建立专题，您需要告知 Jekyll。Jekyll 在 `_config.yml`（默认）中配置。
 
-Create `_config.yml` in the root with the following:
+在 `root` 目录创建 `_config.yml`，内容如下：
 
 ```yaml
 collections:
   authors:
 ```
 
-To (re)load the configuration, restart the jekyll server. Press `Ctrl`+`C` in your terminal to stop the server, and then `jekyll serve` to restart it.
+要（重新）加载配置，需要重启 Jekyll 服务器。在终端中点击 `Ctrl`+`C` 停止服务器，然后 `jekyll serve` 重启。
 
-## Add authors
+## 添加作者
 
 Documents (the items in a collection) live in a folder in the root of the site
 named  `_*collection_name*`. In this case, `_authors`.

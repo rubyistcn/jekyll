@@ -53,12 +53,11 @@ layout: default
 
 ## 帖子列表
 
-There's currently no way to navigate to the blog post. Typically a blog has a
-page which lists all the posts, let's do that next.
+目前还没有办法导航到博客帖子。一般来说一个博客会有一个列出所有帖子的页面，接下来我们就做这件事。
 
-Jekyll makes posts available at `site.posts`.
+Jekyll 通过 `site.posts` 获取所有帖子。
 
-Create `blog.html` in your root (`/blog.html`) with the following content:
+在您的 `root` 目录创建 `blog.html`（`/blog.html`），内容如下：
 
 {% raw %}
 ```liquid
@@ -79,15 +78,13 @@ title: Blog
 ```
 {% endraw %}
 
-There's a few things to note with this code:
+这段代码要注意的事情：
 
-* `post.url` is automatically set by Jekyll to the output path of the post
-* `post.title` is pulled from the post filename and can be overridden by
-setting `title` in front matter
-* `post.excerpt` is the first paragraph of content by default
+* `post.url` 是由 Jekyll 自动设置的帖子输出路径
+* `post.title` 是从帖子的文件名自动拉取的，但是可以通过 Front Matter 中的 `title` 设置覆盖
+* `post.excerpt` 默认使用内容的第一段
 
-You also need a way to navigate to this page through the main navigation. Open
-`_data/navigation.yml` and add an entry for the blog page:
+您可能还需要通过主导航导航到此页。打开 `_data/navigation.yml` 然后添加博客页面的导航项：
 
 ```yaml
 - name: Home
@@ -98,9 +95,9 @@ You also need a way to navigate to this page through the main navigation. Open
   link: /blog.html
 ```
 
-## More posts
+## 更多帖子
 
-A blog isn't very exciting with a single post. Add a few more:
+一个博客不可能只有一篇帖子，所以要添加更多：
 
 `_posts/2018-08-21-apples.md`:
 
@@ -135,7 +132,7 @@ golden flesh with rows of tiny, black, edible seeds. The fruit has a soft
 texture, with a sweet and unique flavor.
 ```
 
-Open <a href="http://localhost:4000" target="_blank" data-proofer-ignore>http://localhost:4000</a>
-and have a look through your blog posts.
+打开 <a href="http://localhost:4000" target="_blank" data-proofer-ignore>http://localhost:4000</a>
+查看您的博客帖子。
 
-Next we'll focus on creating a page for each post author.
+接下来我们将聚焦为每一个帖子的作者创建一个页面。
