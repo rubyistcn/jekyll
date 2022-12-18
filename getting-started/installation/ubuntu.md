@@ -4,11 +4,12 @@ parent: 安装
 grand_parent: 起步
 nav_order: 2
 title: Ubuntu 上的 Jekyll
+permalink: /getting-started/installation/ubuntu/
 ---
 
 ## Install dependencies
 
-Install Ruby and other [prerequisites]({{ '/docs/installation/#requirements' | relative_url }}):
+Install Ruby and other [prerequisites]({{ '/getting-started/installation/#requirements' | relative_url }}):
 
 ```sh
 sudo apt-get install ruby-full build-essential zlib1g-dev

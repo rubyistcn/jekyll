@@ -3,18 +3,16 @@ layout: default
 parent: 手把手教程
 grand_parent: 起步
 nav_order: 8
-title: Blogging
+title: 博客
+permalink: /getting-started/step-by-step/08-blogging/
 ---
-You might be wondering how you can have a blog without a database. In true
-Jekyll style, blogging is powered by text files only.
+您可能奇怪没有数据库怎么可能有博客功能。实际上，Jekyll 的博客只需文本文件。
 
-## Posts
+## 帖子
 
-Blog posts live in a folder called `_posts`. The filename for posts have a
-special format: the publish date, then a title, followed by an extension.
+博客帖子放在一个叫做 `_posts` 的文件夹中。帖子文件名有特定格式：发布日期，然后是标题，然后是扩展名。
 
-Create your first post at `_posts/2018-08-20-bananas.md` with the
-following content:
+创建您的第一篇帖子 `_posts/2018-08-20-bananas.md`，内容如下：
 
 ```markdown
 ---
@@ -31,14 +29,11 @@ starch covered with a rind, which may be green, yellow, red, purple, or brown
 when ripe.
 ```
 
-This is like the `about.md` you created before except it has an author and
-a different layout. `author` is a custom variable, it's not required and could
-have been named something like `creator`.
+这同您前面创建的 `about.md` 除了它有一个作者和不同的版式之外没什么不同。`author` 是一个定制的变量，不是必需，也可以叫做其它名字如 `creator`。
 
-## Layout
+## 版式
 
-The `post` layout doesn't exist so you'll need to create it at
-`_layouts/post.html` with the following content:
+版式 `post` 不存在，所以您需要创建它——`_layouts/post.html`，内容如下：
 
 {% raw %}
 ```liquid
@@ -52,12 +47,11 @@ layout: default
 ```
 {% endraw %}
 
-This is an example of layout inheritance. The post layout outputs the title,
-date, author and content body which is wrapped by the default layout.
+这是一个继承的版式示例。帖子版式输出默认版式封装的标题、日期、作者和内容主体。
 
-Also note the `date_to_string` filter, this formats a date into a nicer format.
+注意 `date_to_string` Filter 的使用将输出一个更漂亮的日期格式。
 
-## List posts
+## 帖子列表
 
 There's currently no way to navigate to the blog post. Typically a blog has a
 page which lists all the posts, let's do that next.

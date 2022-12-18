@@ -4,6 +4,7 @@ parent: 安装
 grand_parent: 起步
 nav_order: 3
 title: 其它 Linux 上的 Jekyll
+permalink: /getting-started/installation/other-linux/
 ---
 
 Installation on other Linux distributions works similarly to installing on [Ubuntu](../ubuntu/).

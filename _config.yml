@@ -5,4 +5,22 @@ theme: just-the-docs
 url: https://docs.rubyist.cn/jekyll
 
 aux_links:
-  Rubyist 文集: https://docs.rubyist.cn
+  『Rubyist 文集』: https://docs.rubyist.cn
+  
+callouts:
+  warning:
+    title: 警告
+    color: red
+  note:
+    title: 备注
+    color: blue
+  new:
+    title: 新！
+    color: green
+  highlight:
+    title: 注意
+    color: yellow
+  info:
+    title: 信息
+    color: purple
+

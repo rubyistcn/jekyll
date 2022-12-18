@@ -4,6 +4,7 @@ parent: 手把手教程
 grand_parent: 起步
 nav_order: 9
 title: Collections
+permalink: /getting-started/step-by-step/09-collections/
 ---
 Let's look at fleshing out authors so each author has their own page with a
 blurb and the posts they've published.

@@ -4,6 +4,7 @@ parent: 手把手教程
 grand_parent: 起步
 nav_order: 10
 title: Deployment
+permalink: /getting-started/step-by-step/10-deployment/
 ---
 In this final step we'll get the site ready for production.
 

@@ -4,7 +4,7 @@ parent: 安装
 grand_parent: 起步
 nav_order: 1
 title: macOS 上的 Jekyll
-permalink: /getting-started/installtion/macos/
+permalink: /getting-started/installation/macos/
 ---
 
 ## 支持的 macOS 版本
@@ -95,4 +95,4 @@ gem install jekyll
 
 ## Troubleshooting
 
-See [Troubleshooting]({{ '/docs/troubleshooting/' | relative_url }}) or [ask for help on our forum](https://talk.jekyllrb.com).
+See [Troubleshooting]({{ '/troubleshooting/' | relative_url }}) or [ask for help on our forum](https://talk.jekyllrb.com).

@@ -3,6 +3,7 @@ layout: default
 title: 快速起步
 parent: 起步
 nav_order: 1
+permalink: /getting-started/quickstart/
 ---
 
 # 快速起步
@@ -44,11 +45,11 @@ bundle exec jekyll serve
 {: .warning}
 如果您使用 Ruby 版本 3.0.0 或更高，第 5 步[可能会失败](https://github.com/github/pages-gem/issues/752)。您可以通过添加 `webrick` 到依赖项 `bundle add webrick` 来修复它。
 
-{: .note .info}
+{: .info}
 给 `serve` 传递 `--livereload` 参数可实现自动刷新页面的元文件的修改： `bundle exec jekyll serve --livereload`
 
 
-如果期间您遇到任何错误，检查您是否已经根据[需求]({{ '/getting-started/installation.html#requirements' | relative_url }})安装了所有预装软件。如果您还有问题，查看[问题聚焦]({{ '/troubleshooting.html#配置问题' | relative_url }})。
+如果期间您遇到任何错误，检查您是否已经根据[需求]({{ '/getting-started/installation/#requirements' | relative_url }})安装了所有预装软件。如果您还有问题，查看[问题聚焦]({{ '/troubleshooting.html#配置问题' | relative_url }})。
 
-{: .note .info}
-各种安装情况根据操作系统不同而不同。查阅我们的[指南]({{ '/getting-started/installation.html#指南' | relative_url }})获取针对不同操作系统的说明。
+{: .info}
+安装情况视操作系统不同而不同。查阅我们的[指南]({{ '/getting-started/installation/#指南' | relative_url }})获取针对不同操作系统的说明。

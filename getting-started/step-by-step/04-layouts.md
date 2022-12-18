@@ -3,29 +3,25 @@ layout: default
 parent: 手把手教程
 grand_parent: 起步
 nav_order: 4
-title: Layouts
+title: 版式
+permalink: /getting-started/step-by-step/04-layouts/
 ---
-Jekyll supports [Markdown](https://daringfireball.net/projects/markdown/syntax)
-in addition to HTML when building pages. Markdown is a great choice for pages with a simple
-content structure (just paragraphs, headings and images), as it's less verbose
-than raw HTML. 
+Jekyll 编译页面时除了 HTML 外也支持 [Markdown](https://daringfireball.net/projects/markdown/syntax)。Markdown 对于内容结构简单（只是段落、标题和图像）的页面来说是一个好
+的选择，而且它比 HTML 语法更简洁。 
 
-Create a new Markdown file named `about.md` in your site's root folder. 
+在您的站点的 root 目录创建一个新的 Markdown 文件 `about.md`。
 
-You could copy the contents of `index` and modify it for the About page. However,
-this creates duplicate code that has to be customized for each new page you add
-to your site. 
+您可以复制 `index` 的内容，然后将其修改为 About 页面。然而，当您需要为您的站点添加定制
+代码的时候这可能导致代码重复。
 
-For example, adding a new stylesheet to your site would involve adding the link
-to the stylesheet to the `<head>` of each page. For sites with many pages, this
-is a waste of time.
+例如：为您的站点添加一个样式表——需要为每个页面的 `<head>` 添加个一个样式表的链接。如果站点有很多页面，这将会很浪费时间。
 
-## Creating a layout
+## 创建版式
 
-Layouts are templates that can be used by any page in your site and wrap around page content.
-They are stored in a directory called `_layouts`.
+版式（Layout）就是一个可为站点每个页面封装内容的模板。
+它们一般存储在叫做 `_layouts` 的目录内。
 
-Create the `_layouts` directory in your site's root folder and create a new `default.html` file with the following content:
+在您的站点的 root 目录下创建 `_layouts` 目录，然后在其内创建一个叫做 `default.html` 的文件，其内容如下：
 
 {% raw %}
 ```liquid
@@ -42,17 +38,14 @@ Create the `_layouts` directory in your site's root folder and create a new `def
 ```
 {% endraw %}
 
-This HTML is almost identical to `index.html` except there's
-no front matter and the content of the page is replaced by a `content`
-variable. 
+这里的 HTML 同 `index.html` 相比除了没有  Front Matter 和页面内容被 `content`
+变量取代外差不多。
 
-`content` is a special variable that returns the rendered
-content of the page on which it's called.
+`content` 是特殊变量——被调用时返回渲染页面内容。
 
-## Use layouts
+## 使用版式
 
-To make `index.html` use your new layout, set the `layout` variable in the front
-matter. The file should look like this:
+让 `index.html` 使用您的新版式，在 Front Matter 中设置 `layout` 变量。文件看起来这样：
 
 {% raw %}
 ```liquid
@@ -64,14 +57,13 @@ title: Home
 ```
 {% endraw %}
 
-When you reload the site, the output remains the same.
+当您重新加载站点时，输出没有变化。
 
-Since the layout wraps around the content on the page, you can call front matter like `page` 
-in the layout file. When you apply the layout to a page, it uses the front matter on that page.
+由于版式封装了页面内容，您可以在版式文件中调用 Front Matter 如 `page`。 当您在页面应用版式时，就如同在那页使用 Front Matter 一样。
 
-## Build the About page
+## 构建 About 页面
 
-Add the following to `about.md` to use your new layout in the About page:
+添加下面代码到 `about.md`——让您的 About 页面使用新版式：
 
 ```markdown
 ---
@@ -83,9 +75,8 @@ title: About
 This page tells you a little bit about me.
 ```
 
-Open <a href="http://localhost:4000/about.html" target="_blank" data-proofer-ignore>http://localhost:4000/about.html</a>
-in your browser and view your new page.
+在您的浏览器中打开查看您的新页面 <a href="http://localhost:4000/about.html" target="_blank" data-proofer-ignore>http://localhost:4000/about.html</a>。
 
-Congratulations, you now have a two page website!
+恭喜，您现在有一个包含两个页面的网站了。
 
-Next, you'll learn about navigating from page to page in your site. 
+接下里，您将学习如何在您的网站里如何从一个页面导航另一个页面的知识了。

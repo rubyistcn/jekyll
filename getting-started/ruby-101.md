@@ -3,6 +3,7 @@ layout: default
 parent: 起步
 nav_order: 3
 title: Ruby 基础
+permalink: /getting-started/ruby-101/
 ---
 
 Jekyll 用 Ruby 编写。如果您是新手，本页帮助您学习一些术语。

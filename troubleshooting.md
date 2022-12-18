@@ -2,6 +2,7 @@
 layout: default
 nav_exclude: true
 title: 问题聚焦
+permalink: /troubleshooting/
 ---
 
 # 问题聚焦

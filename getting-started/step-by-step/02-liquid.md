@@ -4,27 +4,26 @@ parent: 手把手教程
 grand_parent: 起步
 nav_order: 2
 title: Liquid
+permalink: /getting-started/step-by-step/02-liquid/
 ---
 
-Liquid is where Jekyll starts to get more interesting. It is a templating
-language which has three main components: 
-  * [objects](#objects)
-  * [tags](#tags) 
-  * [filters](#filters)
+Liquid 使 Jekyll 开始变得有意思——它是有三种组件的模板语言：
+  * [object](#object)
+  * [tag](#tag) 
+  * [filter](#filter)
 
-## Objects
+## Object
 
-Objects tell Liquid to output predefined [variables](../../variables/) as content on a page. Use double curly braces for objects: {% raw %}`{{`{% endraw %} and {% raw %}`}}`{% endraw %}. 
+Object 告诉 Liquid 将预定义[变量](../../site-structure/variables/)做为内容输出到页面。使用双层花括号引用 object：{% raw %}`{{`{% endraw %} 和 {% raw %}`}}`{% endraw %}。
 
-For example, {% raw %}`{{ page.title }}`{% endraw %} displays the `page.title` variable.
+例如：{% raw %}`{{ page.title }}`{% endraw %} 显示 `page.title` 变量。
 
-## Tags
+## Tag
 
-Tags define the logic and control flow for templates. Use curly
-braces and percent signs for tags: {% raw %}`{%`{% endraw %} and
-{% raw %}`%}`{% endraw %}. 
+Tag 为模板定义逻辑和控制流。用花括号和百分号封装 Tag：{% raw %}`{%`{% endraw %} 和
+{% raw %}`%}`{% endraw %}。
 
-For example:
+例如：
 
 {% raw %}
 ```liquid
@@ -36,16 +35,15 @@ For example:
 ```
 {% endraw %}
 
-This displays the sidebar if the value of the `show_sidebar` page variable is true. 
+如果页面变量 `show_sidebar` 的值是 `true` 将显示 `sidebar` 内容。 
 
-Learn more about the tags available in Jekyll [here](/docs/liquid/tags/).
+学习更多 Tag 知识参阅 Jekyll 文档的[这里](/site-structure/liquid/tags/)。
 
-## Filters
+## Filter
 
-Filters change the output of a Liquid object. They are used within an output
-and are separated by a `|`. 
+Filter 改变 Liquid Object 的输出。它们常用于被 `|` 隔开的输出。 
 
-For example:
+例如：
 
 {% raw %}
 ```liquid
@@ -53,13 +51,13 @@ For example:
 ```
 {% endraw %}
 
-This displays `Hi` instead of `hi`. 
+这将显示 `Hi`，而不是 `hi`。
 
-[Learn more about the filters](/docs/liquid/filters/) available.
+[学习更多 Filter](/site-structure/liquid/filters/) 知识。
 
-## Use Liquid
+## 使用 Liquid
 
-Now, use Liquid to make your `Hello World!` text from [Setup](../01-setup/) lowercase:
+现在，用 Liquid 让您的 `Hello World!` 文本从[设置](../01-setup/)中的大写变为小写：
 
 {% raw %}
 ```liquid
@@ -69,15 +67,15 @@ Now, use Liquid to make your `Hello World!` text from [Setup](../01-setup/) lowe
 ```
 {% endraw %}
 
-To make Jekyll process your changes, add [front matter](../03-front-matter/) to the top of the page:
+要让 Jekyll 处理您的修改，添加 [front matter](../03-front-matter/) 到页面顶端：
 
 ```yaml
 ---
-# front matter tells Jekyll to process Liquid
+# front matter 告诉 Jekyll 处理 Liquid
 ---
 ```
 
-Your HTML document should look like this:
+您的 HTML 文档看起来应当是：
 
 {% raw %}
 ```html
@@ -97,8 +95,8 @@ Your HTML document should look like this:
 ```
 {% endraw %}
 
-When you reload your browser, you should see `hello world!`. 
+当您刷新浏览器时会看到 `hello world!`。
 
-Much of Jekyll's power comes from combining Liquid with other features. Add frontmatter to pages to make Jekyll process the Liquid on those pages.
+Jekyll 的强大来自组合 Liquid 和其它功能。给页面添加了 frontmatter，就会使 Jekyll 处理页面内的 Liquid。
 
-Next, you'll learn more about frontmatter.
+接下来，您会学习更多 frontmatter 知识。

@@ -4,6 +4,7 @@ parent: 安装
 grand_parent: 起步
 nav_order: 4
 title: Windows 上的 Jekyll
+permalink: /getting-started/installation/windows/
 ---
 
 While Windows is not an officially-supported platform, it can be used to run Jekyll with the proper tweaks.
@@ -30,7 +31,7 @@ We only cover RubyInstaller-2.4 and newer here. Older versions need to
    Install Jekyll and Bundler using `gem install jekyll bundler`
 4. Check if Jekyll has been installed properly: `jekyll -v`
 
-{: .note .info}
+{: .info}
 You may receive an error when checking if Jekyll has not been installed properly. Reboot your system and run `jekyll -v` again.
 If the error persists, please open a [RubyInstaller issue](https://github.com/oneclick/rubyinstaller2/issues/new).
 
@@ -41,7 +42,7 @@ That's it, you're ready to use Jekyll!
 If you are using Windows 10 version 1607 or later, another option to run Jekyll is by
 [installing](https://msdn.microsoft.com/en-us/commandline/wsl/install_guide) the Windows Subsystem for Linux.
 
-{: .note .info}
+{: .info}
 You must have [Windows Subsystem for Linux](https://msdn.microsoft.com/en-us/commandline/wsl/about) enabled.
 
 Make sure all your packages and repositories are up to date. Open a new Command Prompt or PowerShell window and type `bash`.
@@ -73,7 +74,7 @@ Install Jekyll:
 gem install jekyll bundler
 ```
 
-{: .note .info}
+{: .info}
   No `sudo` here.
 
 Check your Jekyll version:
@@ -91,10 +92,10 @@ with the current date in the filename.
   <h5>Non-superuser account issues</h5>
   <p>If the `jekyll new` command prints the error "Your user account isn't allowed to install to the system RubyGems", see
   the "Running Jekyll as Non-Superuser" instructions in
-  <a href="{{ '/docs/troubleshooting/#no-sudo' | relative_url }}">Troubleshooting</a>.</p>
+  <a href="{{ '/troubleshooting/#no-sudo' | relative_url }}">Troubleshooting</a>.</p>
 </div>
 
-{: .note .info}
+{: .info}
 Bash on Ubuntu on Windows is still under development, so you may run into issues.
 
 ## Encoding

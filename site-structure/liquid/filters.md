@@ -4,7 +4,7 @@ parent: Liquid
 grand_parent: 站点结构
 nav_order: 1
 title: Liquid 的 Filter
-permalink: "/docs/liquid/filters/"
+permalink: /site-structure/liquid/filters/
 shopify_filter_url: https://shopify.github.io/liquid/filters/
 shopify_filters:
 - abs

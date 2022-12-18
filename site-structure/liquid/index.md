@@ -4,6 +4,7 @@ parent: 站点结构
 has_children: true
 nav_order: 2
 title: Liquid
+permalink: /site-structure/liquid/
 ---
 
 Jekyll 使用 [Liquid](https://shopify.github.io/liquid/) 模板语言处理模板。

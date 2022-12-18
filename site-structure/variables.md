@@ -3,6 +3,7 @@ layout: default
 parent: 站点结构
 nav_order: 3
 title: 变量
+permalink: /site-structure/variables/
 ---
 
 Jekyll traverses your site looking for files to process. Any files with

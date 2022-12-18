@@ -4,6 +4,7 @@ parent: Liquid
 nav_order: 1
 grand_parent: 站点结构
 title: Tags Filters
+permalink: /site-structure/liquid/tags/
 ---
 All of the standard Liquid
 [tags](https://shopify.github.io/liquid/tags/control-flow/) are supported.
