@@ -3,27 +3,25 @@ layout: default
 parent: 手把手教程
 grand_parent: 起步
 nav_order: 10
-title: Deployment
+title: 部署
 permalink: /getting-started/step-by-step/10-deployment/
 ---
-In this final step we'll get the site ready for production.
+最后我们将为生产环境的部署做准备。
 
 ## Gemfile
 
-It's good practice to have a [Gemfile](/docs/ruby-101/#gemfile) for your site.
-This ensures the version of Jekyll and other gems remains consistent across
-different environments.
+推荐为您的站点使用 [Gemfile](/getting-started/ruby-101/#gemfile)。这会确保 Jekyll 和其他 Gem 的版本即使环境不同也能保持一致。
 
-Create a `Gemfile` in the root. 
-The file should be called 'Gemfile' and should *not* have any extension. 
-You can create a Gemfile with Bundler and then add the `jekyll` gem:
+在 `root` 目录创建一个 `Gemfile` 文件。
+该文件只是 'Gemfile'，**不**应该有任何扩展名。
+您可以通过 Bundler 创建 `Gemfile`，然后添加 `jekyll` Gem：
 
 ```sh
 bundle init
 bundle add jekyll
 ```
 
-Your file should look something like:
+您的文件看起来应该这样：
 
 ```ruby
 # frozen_string_literal: true
@@ -32,36 +30,27 @@ source "https://rubygems.org"
 gem "jekyll"
 ```
 
-Bundler installs the gems and creates a `Gemfile.lock` which locks the current 
-gem versions for a future `bundle install`. If you ever want to update your gem 
-versions you can run `bundle update`.
+Bundler 安装 Gem，然后创建一个 `Gemfile.lock` —— 用于锁定当前 Gem 的版本号以备 `bundle install` 时用。如果您想要更新您的 Gem 版本，只需 `bundle update` 即可。
 
-When using a `Gemfile`, you'll run commands like `jekyll serve` with
-`bundle exec` prefixed. So the full command is:
+当使用 `Gemfile` 时，运行诸如 `jekyll serve` 命令时因该使用 `bundle exec` 前缀。所以完整命令是：
 
 ```sh
 bundle exec jekyll serve
 ```
 
-This restricts your Ruby environment to only use gems set in your `Gemfile`.
+这将限制您的 Ruby 环境只用您的 `Gemfile` 中设定的 Gem 版本。
 
-## Plugins
+## 插件
 
-Jekyll plugins allow you to create custom generated content specific to your
-site. There're many [plugins](/docs/plugins/) available or you can even
-write your own.
+Jekyll 插件允许您针对您的站点创建定制生成内容。这有一些可用[插件](/guides/plugins/)，或者您也可以编写自己的插件。
 
-There are three official plugins which are useful on almost any Jekyll site:
+几乎所有 Jekyll 站点都用的三款官方支持插件：
 
-* [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) - Creates a sitemap
-file to help search engines index content
-* [jekyll-feed](https://github.com/jekyll/jekyll-feed) - Creates an RSS feed for
-your posts
-* [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) - Adds meta tags to help
-with SEO
+* [jekyll-sitemap](https://github.com/jekyll/jekyll-sitemap) - 创建一个可以帮助搜索引擎索引内容的站点地图
+* [jekyll-feed](https://github.com/jekyll/jekyll-feed) - 为您的帖子创建一个 RSS 供稿
+* [jekyll-seo-tag](https://github.com/jekyll/jekyll-seo-tag) - 添加有助于 SEO 的  meta 标签
 
-To use these first you need to add them to your `Gemfile`. If you put them
-in a `jekyll_plugins` group they'll automatically be required into Jekyll:
+第一次使用这些您需要将它们添加到 `Gemfile`。如果您将它们放入了 `jekyll_plugins` 组，它们会自动被 Jekyll `require`：
 
 ```ruby
 source 'https://rubygems.org'
@@ -75,7 +64,7 @@ group :jekyll_plugins do
 end
 ```
 
-Then add these lines to your `_config.yml`:
+然后添加下面代码行到您的 `_config.yml`：
 
 ```yaml
 plugins:
@@ -84,11 +73,11 @@ plugins:
   - jekyll-seo-tag
 ```
 
-Now install them by running a `bundle update`.
+现在通过运行 `bundle update` 安装它们。
 
-`jekyll-sitemap` doesn't need any setup, it will create your sitemap on build.
+`jekyll-sitemap` 不需要任何设置，系统在构建时会创建您的站点地图。
 
-For `jekyll-feed` and `jekyll-seo-tag` you need to add tags to
+对于 `jekyll-feed` 和 `jekyll-seo-tag`，您需要添加 Tag 到
 `_layouts/default.html`:
 
 {% raw %}
@@ -110,24 +99,22 @@ For `jekyll-feed` and `jekyll-seo-tag` you need to add tags to
 ```
 {% endraw %}
 
-Restart your Jekyll server and check these tags are added to the `<head>`.
+重启您的 Jekyll 服务器，检查这些 Tag 是否添加到 `<head>`。
 
-## Environments
+## 环境
 
-Sometimes you might want to output something in production but not
-in development. Analytics scripts are the most common example of this.
+有些时候，您可能在生产环境需要输出一些东西，但在开发环境不需要。最常见的例子就是分析
+脚本，就是这种用法。
 
-To do this you can use [environments](/docs/configuration/environments/). You
-can set the environment by using the `JEKYLL_ENV` environment variable when
-running a command. For example:
+要做到这些您需要使用[环境](/build/configuration/environments/)。您可以通过运行命令
+时使用 `JEKYLL_ENV` 环境变量来设定当前环境：
 
 ```sh
 JEKYLL_ENV=production bundle exec jekyll build
 ```
 
-By default `JEKYLL_ENV` is development. The `JEKYLL_ENV` is available to you
-in liquid using `jekyll.environment`. So to only output the analytics script
-on production you would do the following:
+默认的 `JEKYLL_ENV` 值为开发（development）环境。`JEKYLL_ENV` 值在 Liquid 中可以使用
+ `jekyll.environment` 获取。所以要想在只有产品环境时使用分析脚本可以这样：
 
 {% raw %}
 ```liquid
@@ -137,39 +124,32 @@ on production you would do the following:
 ```
 {% endraw %}
 
-## Deployment
+## 部署
 
-The final step is to get the site onto a production server. The most basic way
-to do this is to run a production build:
+最后一步是将站点部署到产品服务器。最基本的方式是运行产品构建：
 
 ```sh
 JEKYLL_ENV=production bundle exec jekyll build
 ```
 
-And then copy the contents of `_site` to your server.
+然后复制 `_site` 的内容到您的服务器。
 
 <div class="note warning">
-  <h5>Destination folders are cleaned on site builds</h5>
+  <h5>站点构建时目标文件间会被清理</h5>
   <p>
-    The contents of <code>_site</code> are automatically cleaned, by default, when
-    the site is built. Files or folders that are not created by your site's build
-    process will be removed.
+    当站点构建时，<code>_site</code> 内容默认会被自动清理。站点构建处理中未创建的文件或者文件夹都会被移除。
   </p>
   <p>
-    Some files could be retained by specifying them within the <code>keep_files</code>
-    configuration directive. Other files could be retained by keeping them in your
-    assets directory.
+    需要保留的文件可以通过将它们在配置命令指定为 <code>keep_files</code> 来完成。其它需要保留的文件就是 <code>assets</code> 目录的文件了。
   </p>
 </div>
 
-A better way is to automate this process using a [CI](/docs/deployment/automated/)
-or [3rd party](/docs/deployment/third-party/).
+更好的方式是用 [CI](/guides/deployment/automated/) 或者[第三方软件](/guides/deployment/third-party/)自动部署。
 
-## Wrap up
+## 收工
 
-That brings us to the end of this step-by-step tutorial and the beginning of
-your Jekyll journey!
+在教程的最后将开始您的 Jekyll 之旅！
 
-* Come say hi to the [community forums](https://talk.jekyllrb.com)
-* Help us make Jekyll better by [contributing](/docs/contributing/)
-* Keep building Jekyll sites!
+* 到[社区论坛](https://talk.jekyllrb.com)报到
+* 通过[做贡献](/contributing/)使 Jekyll 变得更好
+* 保持构建 Jekyll 站点！

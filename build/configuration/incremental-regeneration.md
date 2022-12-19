@@ -3,7 +3,8 @@ layout: default
 parent: 配置
 grand_parent: 构建
 nav_order: 9
-title: Incremental Regeneration
+title: 增量重构
+permalink: /build/configuration/incremental-regeneration/
 ---
 
 ## Incremental Regeneration

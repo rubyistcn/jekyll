@@ -3,7 +3,8 @@ layout: default
 parent: 配置
 grand_parent: 构建
 nav_order: 8
-title: WEBrick Options
+title: WEBrick 选项
+permalink: /build/configuration/webrick/
 ---
 You can provide custom headers for your site by adding them to `_config.yml`
 

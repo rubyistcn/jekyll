@@ -2,7 +2,8 @@
 layout: default
 parent: 内容
 nav_order: 3
-title: 元数据
+title: Front Matter
+permalink: /content/front-matter/
 ---
 
 Any file that contains a [YAML](https://yaml.org/) front matter block will be

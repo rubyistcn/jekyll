@@ -3,7 +3,8 @@ layout: default
 parent: 配置
 grand_parent: 构建
 nav_order: 6
-title: Liquid Options
+title: Liquid 选项
+permalink: /build/configuration/liquid/
 ---
 Liquid's response to errors can be configured by setting `error_mode`. The
 options are

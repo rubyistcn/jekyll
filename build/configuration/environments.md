@@ -3,7 +3,8 @@ layout: default
 parent: 配置
 grand_parent: 构建
 nav_order: 4
-title: Environments
+title: 环境
+permalink: /build/configuration/environments/
 ---
 In the `build` (or `serve`) arguments, you can specify a Jekyll environment
 and value. The build will then apply this value in any conditional statements

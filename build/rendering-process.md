@@ -5,8 +5,7 @@ nav_order: 3
 title: 渲染处理
 ---
 
-For any Jekyll site, a *build session* consists of discrete phases in the following order --- *setting up plugins,
-reading source files, running generators, rendering templates*, and finally *writing files to disk*.
+对于任何 Jekyll 站点而言，一个**构建过程**依次包括下列阶段 --- **设置插件、读取源文件、运行生成器、渲染模板**，最后**向磁盘写入文件**。
 
 While the phases above are self-explanatory, the one phase that warrants dissection is *the rendering phase*.
 

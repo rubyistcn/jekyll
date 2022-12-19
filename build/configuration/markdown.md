@@ -3,7 +3,8 @@ layout: default
 parent: 配置
 grand_parent: 构建
 nav_order: 5
-title: Markdown Options
+title: Markdown 选项
+permalink: /build/configuration/markdown/
 ---
 The various Markdown renderers supported by Jekyll sometimes have extra options
 available.

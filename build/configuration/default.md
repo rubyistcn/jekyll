@@ -3,18 +3,16 @@ layout: default
 parent: 配置
 grand_parent: 构建
 nav_order: 2
-title: Default Configuration
+title: 默认配置
+permalink: /build/configuration/default/
 ---
 
-Jekyll runs with the following configuration options by default. Alternative
-settings for these options can be explicitly specified in the configuration
-file or on the command-line.
+Jekyll 默认用下面配置选项运行。这些选项的替换值设置可以精准的在配置文件或者命令行中定义。
 
 <div class="note info">
-  <h5>Be aware of directory paths</h5>
+  <h5>了解目录路径</h5>
   <p>
-    In general, make directory path values in configuration keys like <code>plugins_dir</code> relative to the current working directory, not the site source. The <code>sass</code> configuration key is an exception, where values must be relative to the site source.
-  </p>
+    一般情况下，配置项的目录路径取值都是基于当前工作目录，例如 <code>plugins_dir</code>，而不是站点源文件目录。<code>sass</code> 配置值是个例外，它的值必须基于站点源文件目录。</p>
 </div>
 
 ```yaml

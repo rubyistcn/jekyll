@@ -3,7 +3,8 @@ layout: default
 parent: 配置
 grand_parent: 构建
 nav_order: 7
-title: Sass/SCSS Options
+title: Sass/SCSS 选项
+permalink: /build/configuration/sass/
 ---
 
 Jekyll comes bundled with [jekyll-sass-converter](https://github.com/jekyll/jekyll-sass-converter) plugin. By default, Jekyll will look for Sass partials in the `_sass` directory relative to your site's `source` directory.

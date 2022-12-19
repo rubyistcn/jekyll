@@ -19,7 +19,7 @@ Examples:
 
 最典型的用法如您在本地做开发的时候用 `jekyll serve` 和您需要为产品生成站点是用 `jekyll build`。
 
-对于所有选项和它们的参数，查阅[构建命令选项](/docs/configuration/options/#build-command-options)。
+对于所有选项和它们的参数，查阅[构建命令选项](/build/configuration/options/#构建命令选项)。
 
 这有一些常用命令：
 
@@ -32,4 +32,4 @@ Examples:
 * `jekyll new-theme` - 创建一个新的 Jekyll 主题框架。
 * `jekyll doctor` - 输出所有过时或者配置的问题。
 
-要改变 Jekyll 的默认构建行为可以查看[配置选项](/docs/configuration/)。
+要改变 Jekyll 的默认构建行为可以查看[配置选项](/build/configuration/)。

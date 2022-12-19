@@ -3,10 +3,11 @@ layout: default
 parent: 配置
 grand_parent: 构建
 nav_order: 3
-title: Front Matter Defaults
+title: Front Matter 默认值
+permalink: /build/configuration/front-matter-defaults/
 ---
 
-Using [front matter](/docs/front-matter/) is one way that you can specify configuration in the pages and posts for your site. Setting things like a default layout, or customizing the title, or specifying a more precise date/time for the post can all be added to your page or post front matter.
+Using [front matter](/content/front-matter/) is one way that you can specify configuration in the pages and posts for your site. Setting things like a default layout, or customizing the title, or specifying a more precise date/time for the post can all be added to your page or post front matter.
 
 Often times, you will find that you are repeating a lot of configuration options. Setting the same layout in each file, adding the same category - or categories - to a post, etc. You can even add custom variables like author names, which might be the same for the majority of posts on your blog.
 
@@ -33,7 +34,7 @@ defaults:
     during automatic regeneration are not loaded until the next execution.
   </p>
   <p>
-    Note <a href="{{ '/docs/datafiles/' | relative_url }}">Data Files</a> are included and reloaded during automatic regeneration.
+    Note <a href="{{ '/content/datafiles/' | relative_url }}">Data Files</a> are included and reloaded during automatic regeneration.
   </p>
 </div>
 
@@ -73,7 +74,7 @@ defaults:
 
 With these defaults, all pages would use the `my-site` layout. Any html files that exist in the `projects/`
 folder will use the `project` layout, if it exists. Those files will also have the `page.author`
-[liquid variable]({{ '/docs/variables/' | relative_url }}) set to `Mr. Hyde`.
+[liquid variable]({{ '/site-structure/variables/' | relative_url }}) set to `Mr. Hyde`.
 
 ```yaml
 collections:
@@ -90,7 +91,7 @@ defaults:
 ```
 
 In this example, the `layout` is set to `default` inside the
-[collection]({{ '/docs/collections/' | relative_url }}) with the name `my_collection`.
+[collection]({{ '/content/collections/' | relative_url }}) with the name `my_collection`.
 
 ### Glob patterns in Front Matter defaults
 
