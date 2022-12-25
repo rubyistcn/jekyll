@@ -51,7 +51,7 @@ class="flag">标记（Flag）</code>（命令行中指定）。
         </p>
       </td>
       <td class='align-center'>
-        <p>see <a href="{{ '/build/configuration/front-matter-defaults/' | relative_url }}" title="details">见后面</a></p>
+        <p>见<a href="{{ '/build/configuration/front-matter-defaults/' | relative_url }}" title="details">后面</a></p>
       </td>
     </tr>
   </tbody>
@@ -102,9 +102,7 @@ class="flag">标记（Flag）</code>（命令行中指定）。
 
 ### Serve 命令选项
 
-In addition to the options below, the `serve` sub-command can accept any of the options
-for the `build` sub-command, which are then applied to the site build which occurs right
-before your site is served.
+除了下面这些选项，`serve` 子命令可接受 `build` 子命令的所有选项——这些选项实际上还是应用到了站点服务之前的构建命令之上了。
 
 <div class="mobile-side-scroller">
 <table>
@@ -155,7 +153,6 @@ before your site is served.
 <div class="note warning">
   <h5>配置文件中不要使用 Tab</h5>
   <p>
-    This will either lead to parsing errors, or Jekyll will revert to the
-    default settings. Use spaces instead.
+    Tab 可能导致解析错误，或者 Jekyll 转用默认值。所以用空格代替。
   </p>
 </div>

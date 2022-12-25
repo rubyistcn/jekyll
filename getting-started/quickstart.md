@@ -19,7 +19,7 @@ Jekyll 需要：
 * RubyGems
 * GCC 和 Make
 
-查阅[需求]({{ '/getting-started/installation/#requirements' | relative_url }})有关指南，获取更多细节。
+查阅[需求]({{ '/getting-started/installation/#需求' | relative_url }})有关指南，获取更多细节。
 
 ## 说明
 
@@ -49,7 +49,7 @@ bundle exec jekyll serve
 给 `serve` 传递 `--livereload` 参数可实现自动刷新页面的元文件的修改： `bundle exec jekyll serve --livereload`
 
 
-如果期间您遇到任何错误，检查您是否已经根据[需求]({{ '/getting-started/installation/#requirements' | relative_url }})安装了所有预装软件。如果您还有问题，查看[问题聚焦]({{ '/troubleshooting.html#配置问题' | relative_url }})。
+如果期间您遇到任何错误，检查您是否已经根据[需求]({{ '/getting-started/installation/#需求' | relative_url }})安装了所有预装软件。如果您还有问题，查看[问题聚焦]({{ '/troubleshooting.html#配置问题' | relative_url }})。
 
 {: .info}
 安装情况视操作系统不同而不同。查阅我们的[指南]({{ '/getting-started/installation/#指南' | relative_url }})获取针对不同操作系统的说明。

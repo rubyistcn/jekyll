@@ -25,7 +25,7 @@ collections:
 
 ## 添加作者
 
-文档（专题内的条目）聚在站点 `root` 目录下一个叫做  `_*collection_name*` 的目录内。本例中就是 `_authors`。
+文档（专题内的条目）聚在站点 `root` 目录下一个叫做  *`_collection_name`* 的目录内。本例中就是 `_authors`。
 
 为每个作者创建一个文档：
 

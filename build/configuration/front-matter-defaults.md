@@ -7,53 +7,50 @@ title: Front Matter 默认值
 permalink: /build/configuration/front-matter-defaults/
 ---
 
-Using [front matter](/content/front-matter/) is one way that you can specify configuration in the pages and posts for your site. Setting things like a default layout, or customizing the title, or specifying a more precise date/time for the post can all be added to your page or post front matter.
+使用 [Front Matter](/content/front-matter/) 是您可以指定您站点的页面和帖子的配置参数的方式之一。像指定默认版式、定制标题、指定更精准的帖子日期时间等都可以添加到您的页面或者帖子的 Front Matter。
 
-Often times, you will find that you are repeating a lot of configuration options. Setting the same layout in each file, adding the same category - or categories - to a post, etc. You can even add custom variables like author names, which might be the same for the majority of posts on your blog.
+很多时候，您会发现很多选项您在不断的重复——为每个文件设置同样的版式，为每个帖子添加通用的分类 等等。甚至您可能添加的个性化变量，如作者名字，在您的博客中也是帖子中没什么变化的重复。
 
-Instead of repeating this configuration each time you create a new post or page, Jekyll provides a way to set these defaults in the site configuration. To do this, you can specify site-wide defaults using the `defaults` key in the `_config.yml` file in your project's root directory.
+去除每次创建新帖子或者页面时的重复操作，Jekyll 提供了一种在站点配置中设置默认值的处理方式。要使用这种方式，您可以指定站点级默认值——在您站点根目录的 `_config.yml` 文件中设定 `defaults` 值。
 
-The `defaults` key holds an array of scope/values pairs that define what defaults should be set for a particular file path, and optionally, a file type in that path.
+`defaults` 值是一个定义对应路径和选项以及该路径文件类型的 scope/values 对。
 
-Let's say that you want to add a default layout to all pages and posts in your site. You would add this to your `_config.yml` file:
+让我们假设您想为您站点的所有页面和帖子添加一个默认版式。您可以这样修改 `_config.yml`：
 
 ```yaml
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
+      path: "" # 一个空的字符串表示项目内所有文件
     values:
       layout: "default"
 ```
 
 <div class="note info">
-  <h5>Stop and rerun `jekyll serve` command.</h5>
+  <h5>停止和重启 <code>jekyll serve</code> 命令。</h5>
   <p>
-    The <code>_config.yml</code> master configuration file contains global configurations
-    and variable definitions that are read once at execution time. Changes made to <code>_config.yml</code>
-    during automatic regeneration are not loaded until the next execution.
+    <code>_config.yml</code> 主配置文件包含全局配置和执行时被一次性读取的变量定义。一点修改了 <code>_config.yml</code> 并不会自动读取，必须下次启动执行时才能加载。
   </p>
   <p>
-    Note <a href="{{ '/content/datafiles/' | relative_url }}">Data Files</a> are included and reloaded during automatic regeneration.
+    注意当自动重构时<a href="{{ '/content/datafiles/' | relative_url }}">数据文件</a>也被自动导入和重载。
   </p>
 </div>
 
-Here, we are scoping the `values` to any file that exists in the path `scope`. Since the path is set as an empty string, it will apply to **all files** in your project. You probably don't want to set a layout on every file in your project - like css files, for example - so you can also specify a `type` value under the `scope` key.
+这里，我们映射 `values` 到所有 `scope` 范围内的文件。由于路径设置为空字符串，所以会映射到项目的**所有文件**。您可能不想为项目的每个文件设置同一个版式——例如同样的 CSS 文件——所以您可以在 `scope` 内指定一个 `type` 值。
 
 ```yaml
 defaults:
   -
     scope:
-      path: "" # an empty string here means all files in the project
-      type: "posts" # previously `post` in Jekyll 2.2.
+      path: "" # 空字符串表示项目内所有文件
+      type: "posts" # 以前使用 `post` 是在 Jekyll 2.2 里
     values:
       layout: "default"
 ```
 
-Now, this will only set the layout for files where the type is `posts`.
-The different types that are available to you are `pages`, `posts`, `drafts` or any collection in your site. While `type` is optional, you must specify a value for `path` when creating a `scope/values` pair.
+现在，只设置 `posts` 的版式了。类型有 `pages`、`posts`、`drafts` 或者任何站点内的专题。`type` 是可选项，当创建 `scope/values` 对时必须制定 `path` 值。
 
-As mentioned earlier, you can set multiple scope/values pairs for `defaults`.
+如同前面所说，`defaults` 可设置多组 scope/values 对。
 
 ```yaml
 defaults:
@@ -72,9 +69,8 @@ defaults:
       author: "Mr. Hyde"
 ```
 
-With these defaults, all pages would use the `my-site` layout. Any html files that exist in the `projects/`
-folder will use the `project` layout, if it exists. Those files will also have the `page.author`
-[liquid variable]({{ '/site-structure/variables/' | relative_url }}) set to `Mr. Hyde`.
+根据这些默认值，所有页面使用 `my-site` 版式，所有 `projects/` 文件夹的 HTML 文件使用 `project` 版式（如果存在）。这些文件的 `page.author`
+[liquid 变量]({{ '/site-structure/variables/' | relative_url }}) 设置为 `Mr. Hyde`。
 
 ```yaml
 collections:
@@ -90,10 +86,9 @@ defaults:
       layout: "default"
 ```
 
-In this example, the `layout` is set to `default` inside the
-[collection]({{ '/content/collections/' | relative_url }}) with the name `my_collection`.
+此例中，名字为 `my_collection` 的[专题]({{ '/content/collections/' | relative_url }})的 `layout` 设置为 `default`。
 
-### Glob patterns in Front Matter defaults
+### Glob 模式在 Front Matter defaults 中使用
 
 It is also possible to use glob patterns (currently limited to patterns that contain `*`) when matching defaults. For example, it is possible to set specific layout for each `special-page.html` in any subfolder of `section` folder. {%- include docs_version_badge.html version="3.7.0" -%}
 

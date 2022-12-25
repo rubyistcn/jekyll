@@ -53,9 +53,7 @@
 
 - name: 时区
   description: >-
-    设置站点时区——这就是设置 <code>TZ</code> 环境变量（Ruby 用于时间、日期创建和管理）。任何来自 <a href="https://en.wikipedia.org/wiki/Tz_database">IANA 时区数据库</a>的值都有效，例如 <code>America/New_York</code>。可用值列表在
-    <a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">这里</a>。
-    当站点在本地机器运行时，默认时区由您的操作系统决定。当站点运行与远程主机（服务器）时，默认时区依赖于服务器设置或者服务器所在地。
+    设置站点时区——这就是设置 <code>TZ</code> 环境变量（Ruby 用于时间、日期创建和管理）。任何来自 <a href="https://en.wikipedia.org/wiki/Tz_database">IANA 时区数据库</a>的值都有效，例如 <code>America/New_York</code>。可用值列表在<a href="https://en.wikipedia.org/wiki/List_of_tz_database_time_zones">这里</a>。当站点在本地机器运行时，默认时区由您的操作系统决定。当站点运行与远程主机（服务器）时，默认时区依赖于服务器设置或者服务器所在地。
   option: "timezone: TIMEZONE"
 
 

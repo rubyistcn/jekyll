@@ -1,29 +1,29 @@
-- name: Local server port
-  description: Listen on the given port. The default is `4000`.
+- name: 本地服务器端口
+  description: 指定监听端口。默认是 <code>4000</code>。
   option: "port: PORT"
   flag: "-P, --port PORT"
 
 
-- name: Local server hostname
-  description: Listen at the given hostname. The default is `localhost`.
+- name: 本地服务器主机名
+  description: 监听指定主机名。默认为 <code>localhost</code>。
   option: "host: HOSTNAME"
   flag: "-H, --host HOSTNAME"
 
 
-- name: Live reload
-  description: Reload a page automatically on the browser when its content is edited.
+- name: 实时重载
+  description: 当页面内容有改动时浏览器自动重新加载。
   option: "livereload: BOOL"
   flag: "-l, --livereload"
 
 
-- name: Live reload ignore
-  description: File glob patterns for LiveReload to ignore.
+- name: 忽略实时重载
+  description: 使用文件 glob 模式忽略实时重载。
   option: "livereload_ignore: [ GLOB1,... ]"
   flag: "--livereload-ignore GLOB1[,GLOB2,...]"
 
 
-- name: Live reload min/max delay
-  description: Minimum/Maximum delay before automatically reloading page.
+- name: 实时重载 min/max 延迟
+  description: 自动重载页面前的最小/最大延迟时间。
   options:
     - "livereload_min_delay: SECONDS"
     - "livereload_max_delay: SECONDS"
@@ -32,40 +32,40 @@
     - "--livereload-max-delay SECONDS"
 
 
-- name: Live reload port
-  description: Port for LiveReload to listen on.
+- name: 实时重载端口
+  description: 实时重载监听端口。
   flag: "--livereload-port PORT"
 
 
-- name: Open URL
-  description: Open the site's URL in the browser.
+- name: 打开 URL
+  description: 在浏览器打开站点的 URL。
   option: "open_url: BOOL"
   flag: "-o, --open-url"
 
 
-- name: Detach
-  description: Detach the server from the terminal.
+- name: 分离
+  description: 将服务器从终端分离。
   option: "detach: BOOL"
   flag: "-B, --detach"
 
 
-- name: Skips the initial site build
-  description: Skips the initial site build which occurs before the server is started.
+- name: 忽略站点初始构建
+  description: 在服务器启动前忽略站点的初始构建。
   option: "skip_initial_build: BOOL"
   flag: "--skip-initial-build"
 
 
-- name: Show directory listing
-  description: Show a directory listing instead of loading your index file.
+- name: 显示目录列表
+  description: 显示目录列表，而不是加载首页文件。
   option: "show_dir_listing: BOOL"
   flag: "--show-dir-listing"
 
 
-- name: X.509 (SSL) private key
-  description: "SSL Private Key, stored or symlinked in the site source."
+- name: X.509 (SSL) 私有键
+  description: "SSL 私有键，存储或者链接在站点源文件中。"
   flag: "--ssl-key"
 
 
-- name: X.509 (SSL) certificate
-  description: "SSL Public certificate, stored or symlinked in the site source."
+- name: X.509 (SSL) 认证
+  description: "SSL 公共证书，存储或链接在站点源文件中。"
   flag: "--ssl-cert"

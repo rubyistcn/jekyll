@@ -1,62 +1,61 @@
-- name: Regeneration
-  description: Enable auto-regeneration of the site when files are modified.
+- name: 重构
+  description: 开启后当文件修改后系统就会重新生成站点。
   flag: "-w, --[no-]watch"
 
 
-- name: Configuration
+- name: 配置
   description: >-
-    Specify config files instead of using <code>_config.yml</code> automatically.
-    Settings in later files override settings in earlier files.
+    指定配置文件会自动替换默认的 <code>_config.yml</code>。后设置文件覆盖早期文件。
   flag: "--config FILE1[,FILE2,...]"
 
 
-- name: Plugins
+- name: 插件
   description: >-
-    Specify plugin directories instead of using <code>_plugins/</code> automatically.
+    指定插件目录替换默认的 <code>_plugins/</code>。
   option: "plugins_dir: [ DIR1,... ]"
   flag: "-p, --plugins DIR1[,DIR2,...]"
 
 
-- name: Layouts
+- name: 版式
   description: >-
-    Specify layout directory instead of using <code>_layouts/</code> automatically.
+    指定版式目录替换默认的 <code>_layouts/</code>。
   option: "layouts_dir: DIR"
   flag: --layouts DIR
 
 
-- name: Drafts
-  description: Process and render draft posts.
+- name: 草稿
+  description: 处理和渲染帖子草稿。
   option: "show_drafts: BOOL"
   flag: -D, --drafts
 
 
-- name: Environment
-  description: Use a specific environment value in the build.
+- name: 环境
+  description: 构建时使用指定的环境值。
   flag: JEKYLL_ENV=production
 
 
-- name: Future
-  description: Publish posts or collection documents with a future date.
+- name: 未来
+  description: 用未来的日期发布帖子或者专题文档。
   option: "future: BOOL"
   flag: --future
 
 
-- name: Unpublished
-  description: Render posts that were marked as unpublished.
+- name: 未发布
+  description: 渲染帖子标记为未发布状态。
   option: "unpublished: BOOL"
   flag: --unpublished
 
 
 - name: LSI
   description: >-
-    Produce an index for related posts. Requires the
-    <a href="https://jekyll.github.io/classifier-reborn/">classifier-reborn</a> plugin.
+    生成一个相关帖子的索引。需要
+    <a href="https://jekyll.github.io/classifier-reborn/">classifier-reborn</a> 插件支持。
   option: "lsi: BOOL"
   flag: --lsi
 
 
-- name: Limit posts
-  description: Limit the number of posts to parse and publish.
+- name: 限制帖子数
+  description: 限制解析和发布的帖子数。
   option: "limit_posts: NUM"
   flag: --limit_posts NUM
 
@@ -67,57 +66,53 @@
   flag: --force_polling
 
 
-- name: Verbose output
-  description: Print verbose output.
+- name: 详细输出
+  description: 打印详细输出。
   option: "verbose: BOOL"
   flag: -V, --verbose
 
 
-- name: Silence output
-  description: Silence the normal output from Jekyll during a build.
+- name: 静默输出
+  description: Jekyll 构建站点时使用静默输出。
   option: "quiet: BOOL"
   flag: -q, --quiet
 
 
-- name: Log level
-  description: Specify a log level among debug, info, warn, or error.
+- name: 日志等级
+  description: 指定调试时的日志等级， info、warn 或 error。
   flag: JEKYLL_LOG_LEVEL=info
 
 
-- name: Incremental build
+- name: 增量构建
   description: >-
-    Enable the experimental
-    <a href="/docs/configuration/incremental-regeneration/">incremental
-    build</a> feature. Incremental build only re-builds posts and pages that
-    have changed, resulting in significant performance improvements for large
-    sites, but may also break site generation in certain cases.
+    开启实验性<a href="/build/configuration/incremental-regeneration/">增量构建</a>功能。增量构建只会重新构建修改过的帖子和页面，这对于大型网站提升性能意义重大，但是某些情况下也有可能导致站点生成错误。
   option: "incremental: BOOL"
   flag: -I, --incremental
 
 
-- name: Disable bundle require
-  description: Disables the need to require gems in `:jekyll_plugins` Gemfile
+- name: 关闭 Bundle Require
+  description: 在 <code>:jekyll_plugins</code> Gemfile 中关闭依赖的 Gem 
   flag: JEKYLL_NO_BUNDLER_REQUIRE=true
 
 
-- name: Liquid profiler
-  description: Generate a Liquid rendering profile to help you identify performance bottlenecks.
+- name: Liquid 分析器
+  description: 生成一个帮您识别执行瓶颈的 Liquid 渲染分析器。
   option: "profile: BOOL"
   flag: --profile
 
 
-- name: Strict front matter
-  description: Cause a build to fail if there is a YAML syntax error in a page's front matter.
+- name: 不使用 Front Matter
+  description: 如果页面的 Front Matter 因为 YAML 语法错误导致构建失败，可以选择不使用 Front Matter 构建。
   option: "strict_front_matter: BOOL"
   flag: --strict_front_matter
 
 
-- name: Base URL
-  description: Serve the website from the given base URL.
+- name: 基本 URL
+  description: 在给定的基本 URL 提供站点服务。
   option: "baseurl: URL"
   flag: -b, --baseurl URL
 
 
-- name: Trace
-  description: Show the full backtrace when an error occurs.
+- name: 追踪
+  description: 当出现错误时显示所有追踪信息。
   flag: -t, --trace
